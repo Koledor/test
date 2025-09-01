@@ -1,31 +1,28 @@
 #include<iostream>
-#include<string>
 using namespace std;
-class Client
+int main()
 {
-public:
-    Client()
-    {
-        ClientNum++;
-    }
-    static string ServerName;
-    static int ClientNum;
-    static void changeServerName(char s)
-    {
-        ServerName = s;
-    }
-    static void show()
-    {
-        cout << "server name:" << "ServerName" << endl;
-        cout << "num of clients:" << ClientNum << endl;
-    }
-};
-string Client::ServerName = "A";
-int Client::ClientNum = 0;
-int main() {
-    Client::show();
-    Client c1;
-    Client::show();
-    Client::changeServerName('B');
-    Client::show();
+	int fen;
+	cin >> fen;
+	switch (fen)
+	{
+		case 6:
+			cout << " 及格" << endl;
+			break;
+		case 7:
+			cout << "一般" << endl;
+			break;
+		case 8:
+			cout << "良好" << endl;
+			break;
+		case 9:
+			cout << "优秀" << endl;
+			break;
+		case 10:
+			cout << "满分" << endl;
+			break;
+		default:
+			cout << "不及格" << endl;
+	}
+	return 0;
 }
